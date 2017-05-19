@@ -1,0 +1,8 @@
+﻿  ball.cpp
+c:\users\justin\documents\visual studio 2015\projects\sfmlpong\sfmlpong\ball.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\justin\documents\visual studio 2015\projects\sfmlpong\sfmlpong\ball.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\justin\documents\visual studio 2015\projects\sfmlpong\sfmlpong\ball.cpp(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\justin\documents\visual studio 2015\projects\sfmlpong\sfmlpong\ball.cpp(74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\justin\documents\visual studio 2015\projects\sfmlpong\sfmlpong\ball.cpp(78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  sfmlpong.vcxproj -> C:\Users\Justin\Documents\Visual Studio 2015\Projects\sfmlpong\Debug\sfmlpong.exe
+  sfmlpong.vcxproj -> C:\Users\Justin\Documents\Visual Studio 2015\Projects\sfmlpong\Debug\sfmlpong.pdb (Partial PDB)
