@@ -15,10 +15,6 @@ int main()
 	{
 		return 1;
 	}
-	sf::Text p1scoreI, p2scoreI;
-	p1scoreI.setFont(font);
-	p2scoreI.setFont(font);
-	//p1scoreI.setString(str();
 
 	PlayerPaddle p1(20, 100, SCREENWIDTH - 20, SCREENHEIGHT / 2, 1);
 	PlayerPaddle p2(20, 100, 0, SCREENHEIGHT / 2, 2);
@@ -28,6 +24,17 @@ int main()
 	sf::Time currentTime;
 
 	PlayerPaddle paddleCollision;
+
+	std::vector<int> pts{ 0,0 };
+	sf::Text p2score;
+	sf::Text p1score;
+	p2score.setPosition(SCREENWIDTH/4, 90);
+	p2score.setCharacterSize(72);
+	p2score.setFont(font);
+	p1score.setPosition(SCREENWIDTH / 2 + SCREENWIDTH / 4, 90);
+	p1score.setCharacterSize(72);
+	p1score.setFont(font);
+
 	double dT = clock.getElapsedTime().asMilliseconds();
 
     while (window.isOpen())
@@ -39,15 +46,19 @@ int main()
                 window.close();
 
         }
-		p1.update(dT);
-		p2.update(dT);
-		ball.update(dT, p1, p2, paddleCollision);
+		p1.update(dT, ball);
+		p2.update(dT, ball);
+		ball.update(dT, p1, p2, paddleCollision, pts);
+
         window.clear();
 		window.draw(p1);
 		window.draw(p2);
 		window.draw(ball);
-		//window.draw(p1Pts);
-		//window.draw(p2Pts);
+
+		p2score.setString(std::to_string(pts[0]));
+		p1score.setString(std::to_string(pts[1]));
+		window.draw(p2score);
+		window.draw(p1score);
         window.display();
 		dT = clock.restart().asMilliseconds();
     }
