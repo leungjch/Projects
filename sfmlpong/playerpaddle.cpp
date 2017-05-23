@@ -50,7 +50,7 @@ void PlayerPaddle::update(double dT, Ball ball)
 			sf::Clock reactionTime;
 				if (reactionTime.getElapsedTime() > sf::milliseconds(20))
 				{
-					ball.speedY
+					ball.speedY;
 				}
 		}
 	}
